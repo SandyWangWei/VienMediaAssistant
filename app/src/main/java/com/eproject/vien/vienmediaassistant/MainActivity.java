@@ -1,13 +1,13 @@
 package com.eproject.vien.vienmediaassistant;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.eproject.vien.mvp.delegate.MainDelegate;
+import com.eproject.vien.mvp.presenter.ActivityPresenter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends ActivityPresenter {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected Class getDelegateClass() {
+        return MainDelegate.class;
     }
+
 }
